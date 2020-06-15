@@ -13,14 +13,14 @@ const AllStudentsView = (props) => {
       <Link to="/students/new" className="add-student">
         Add Student
       </Link>
+      
       <div>
         {props.allStudents.map((student) => (
           <div key={student.id}>
             <Link to={`/students/${student.id}`}>
-              <h1>{student.name}</h1>
+              <h1>{student.firstName}</h1>
             </Link>
             <img src={student.imageUrl} width="200px" alt={student.name} />
-            <p>{student.students.length} students</p>
             <button onClick={() => props.handleDelete(student.id)}>
               Delete
             </button>
