@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const StudentNameListView = (props) => {
   console.log(props);
   if (!props.students) {
+    
     return <p>There are no students enrolled</p>;
+
   }
   return (
     <>
